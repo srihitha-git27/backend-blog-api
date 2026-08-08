@@ -1,0 +1,83 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "Srihitha",
+  "email": "srihitha@gmail.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "srihitha@gmail.com",
+  "password": "123456"
+}
+
+
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTc1YjcwMWFjM2ZjNjhhMjAzMWI5YTkiLCJpYXQiOjE3ODYxNzgwMTEsImV4cCI6MTc4NjE4MTYxMX0.tm24yAGCZGsn3LlVkswh2IA9IIjnH_ehQ3m4hwabqbY
+{
+  "title": "My First Blog",
+  "content": "This is my first blog content.",
+  "author": "Srihitha",
+  "userID":"68a75b808ac3fc68a2031b9ac"
+}
+
+###
+
+GET http://localhost:3000/blogs
+
+###
+
+GET http://localhost:3000/blogs/6a769a10ba0e15cf09169845
+
+###
+
+###
+
+GET http://localhost:3000/blogs
+
+###
+
+PUT http://localhost:3000/blogs/6a769a5fba0e15cf09169846
+Content-Type: application/json
+
+{
+  "title": "Updated Blog",
+  "content": "This is my updated blog content.",
+  "author": "Srihitha"
+}
+
+###
+DELETE http://localhost:3000/blogs/6a769a5fba0e15cf09169846
+Content-Type: application/json
+
+{
+  "message": "Blog Deleted Successfully!"
+}
+###
+
+GET http://localhost:3000/
+
+### Update Blog
+PUT http://localhost:3000/blogs/6a769a10ba0e15cf09169845
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTc1YjcwMWFjM2ZjNjhhMjAzMWI5YTkiLCJpYXQiOjE3ODYxNzg5NzMsImV4cCI6MTc4NjE4MjU3M30.exMekH0SODEVBPeZDXW0T85dTThWCORnbEwFZlOpzgE
+
+{
+  "title": "Updated Blog",
+  "content": "This is my updated blog content.",
+  "author": "Srihitha"
+}
+
+### Delete Blog
+DELETE http://localhost:3000/blogs/6a769a10ba0e15cf09169845
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTc1YjcwMWFjM2ZjNjhhMjAzMWI5YTkiLCJpYXQiOjE3ODYxNzkyMDYsImV4cCI6MTc4NjE4MjgwNn0.YDHIsmDDlwDmLPvK5pTi0Hm8DnPwqG3ilKm1L4dUvf4
